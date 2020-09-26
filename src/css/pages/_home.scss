@@ -1,0 +1,95 @@
+.body__container {
+  display: grid;
+  grid-template-rows: 15vh 90vh repeat(2, 40vw) repeat(3, min-content);
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+}
+.hero {
+  grid-column: full-start / full-end;
+  margin-top: -15vh;
+  background-color: rebeccapurple;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url('../img/hero.jpg');
+  background-size: cover;
+  object-fit: cover;
+  background-position: top;
+  &__container {
+    width: 60vw;
+    margin-left: 8vw;
+    margin-top: 40vh;
+    .title {
+      margin: 1.5vw 0;
+    }
+  }
+}
+
+.motivation {
+  &__picture {
+    background-color: aqua;
+    grid-column: center-start / col-end 4;
+  }
+  &__content {
+    background-color: pink;
+    grid-column: col-start 5 / center-end;
+  }
+}
+
+.proyects {
+  grid-column: center-start / center-end;
+
+  margin: 15rem 0;
+
+  display: grid;
+  grid-row: 5vh min-content;
+  grid-template-columns: repeat(3, minmax(18rem, 1fr));
+  grid-template-areas:
+    'title title title'
+    'proyect1 proyect2 proyect3';
+  grid-gap: 6rem;
+
+  .subtitle3 {
+    grid-area: title;
+    text-align: center;
+  }
+  .proyect--1 {
+    grid-area: proyect1;
+  }
+  .proyect--2 {
+    grid-area: proyect2;
+  }
+  .proyect--3 {
+    grid-area: proyect3;
+  }
+}
+@media screen and (max-width: 768px) {
+  .proyects {
+    grid-template-columns: 20rem;
+    grid-template-areas:
+      'title'
+      'proyect1'
+      'proyect2'
+      'proyect3';
+  }
+  .hero {
+    &__container {
+      .title {
+        font-size: 8vw;
+      }
+      a {
+        font-size: 3vw;
+      }
+    }
+  }
+}
+.ad {
+  background-color: saddlebrown;
+  grid-column: full-start / full-end;
+}
