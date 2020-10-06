@@ -5,10 +5,22 @@
   font-family: $font-principal, Times, serif;
   color: #ffffff;
   font-weight: 100;
-  &-2 {
-    margin-top: 9.6rem;
-  }
 }
+
 .title-red {
   color: $color-secundary;
+}
+.paragraph {
+  font-family: $font-family;
+  color: #ffffff;
+  font-size: 1.8vw;
+  font-weight: 100;
+  line-height: 3vw;
+}
+
+.subtitle {
+  font-family: $font-family;
+  color: #ffffff;
+  font-size: 4vw;
+  font-weight: 100;
 }

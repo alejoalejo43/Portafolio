@@ -1,17 +1,14 @@
 .body__container {
   display: grid;
-  grid-template-rows: 15vh 90vh repeat(2, 40vw) repeat(3, min-content);
   grid-template-columns:
-    [full-start] minmax(6rem, 1fr) [center-start] repeat(
-      8,
-      [col-start] minmax(min-content, 14rem) [col-end]
-    )
-    [center-end] minmax(6rem, 1fr) [full-end];
+    [start] repeat(12, [col-start] minmax(11px, 1fr) [col-end])
+    [end];
+  grid-template-rows: 90vh 60vw 90vh;
+  /*  grid-area: 'header header header header header header header header '
+    'box2 box2 box2 box2 box3 box3 box3 box3'; */
 }
 .hero {
-  grid-column: full-start / full-end;
-  margin-top: -15vh;
-  background-color: rebeccapurple;
+  grid-column: start / end;
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.6),
@@ -21,75 +18,133 @@
   background-size: cover;
   object-fit: cover;
   background-position: top;
-  &__container {
-    width: 60vw;
-    margin-left: 8vw;
-    margin-top: 40vh;
-    .title {
-      margin: 1.5vw 0;
-    }
+  display: flex;
+  flex-direction: column;
+
+  display: grid;
+  grid-template-columns:
+    [start] repeat(12, [col-start] minmax(11px, 1fr) [col-end])
+    [end];
+  grid-template-rows: 15vh 37vh 38vh;
+  .title {
+    grid-column: col-start 2 / col-end 8;
+  }
+  .button {
+    grid-column: col-start 2 / col-end 6;
+    align-self: center;
+    justify-self: start;
   }
 }
 
 .motivation {
   &__picture {
-    background-color: aqua;
-    grid-column: center-start / col-end 4;
+    width: 50vw;
+    height: 60vw;
+    grid-column: start / col-end 6;
+    background-color: $color-primary-blue;
+    display: flex;
+    justify-content: center;
+    &--container {
+      align-self: center;
+
+      img {
+        width: 30vw;
+        /* transform: translate(8vw, 8vw); */
+        position: absolute;
+        z-index: 1;
+      }
+    }
+    &--square {
+      width: 30vw;
+      height: 43vw;
+      border: 2px solid $color-secundary;
+      transform: translate(3vw, 3vw);
+    }
   }
   &__content {
-    background-color: pink;
-    grid-column: col-start 5 / center-end;
-  }
-}
-
-.proyects {
-  grid-column: center-start / center-end;
-
-  margin: 15rem 0;
-
-  display: grid;
-  grid-row: 5vh min-content;
-  grid-template-columns: repeat(3, minmax(18rem, 1fr));
-  grid-template-areas:
-    'title title title'
-    'proyect1 proyect2 proyect3';
-  grid-gap: 6rem;
-
-  .subtitle3 {
-    grid-area: title;
-    text-align: center;
-  }
-  .proyect--1 {
-    grid-area: proyect1;
-  }
-  .proyect--2 {
-    grid-area: proyect2;
-  }
-  .proyect--3 {
-    grid-area: proyect3;
-  }
-}
-@media screen and (max-width: 768px) {
-  .proyects {
-    grid-template-columns: 20rem;
-    grid-template-areas:
-      'title'
-      'proyect1'
-      'proyect2'
-      'proyect3';
-  }
-  .hero {
-    &__container {
+    grid-column: col-start 7 / end;
+    display: flex;
+    justify-content: center;
+    &--container {
+      width: 40vw;
+      align-self: center;
       .title {
-        font-size: 8vw;
+        margin-top: 0;
       }
-      a {
-        font-size: 3vw;
-      }
+
+      /* padding: 10vw 10vw 0 0; */
+    }
+    background-color: $color-primary-blue;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    .title {
+      font-size: 9vw;
+      transform: translateY(5rem);
+    }
+    .button {
+      grid-column: col-start 2 / col-end 9;
+      letter-spacing: 0.1rem;
+      font-size: 3.5vw;
+      padding: 2rem 4rem;
     }
   }
 }
-.ad {
-  background-color: saddlebrown;
-  grid-column: full-start / full-end;
+
+@media screen and (max-width: 460px) {
+  //343
+  .body__container {
+    grid-template-rows: 90vh 80vh 80vh;
+  }
+  .motivation {
+    &__picture {
+      width: 100vw;
+      height: 90vh;
+      grid-column: start / end;
+      background-color: $color-primary-blue;
+      display: flex;
+      justify-content: center;
+
+      &--container {
+        align-self: center;
+        width: 70vw;
+        height: 80vh;
+        padding-top: 5vw;
+        margin-left: -5vw;
+
+        img {
+          width: 70vw;
+        }
+      }
+      &--square {
+        width: 70vw;
+        height: 100vw;
+        border: 2px solid $color-secundary;
+        transform: translate(5vw, 6vw);
+      }
+    }
+    &__content {
+      grid-column: start / end;
+      &--container {
+        width: 80vw;
+        /*  padding: 10vw 10vw 0 0; */
+        .title {
+          font-size: 14vw;
+          text-align: center;
+        }
+        .paragraph {
+          font-size: 15px;
+          line-height: 20px;
+          text-align: center;
+        }
+        .subtitle {
+          font-size: 30px;
+          text-align: center;
+        }
+      }
+      background-color: $color-primary-blue;
+    }
+  }
 }
