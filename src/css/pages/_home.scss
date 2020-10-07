@@ -7,7 +7,7 @@
   /*  grid-area: 'header header header header header header header header '
     'box2 box2 box2 box2 box3 box3 box3 box3'; */
 }
-.hero {
+.header {
   grid-column: start / end;
   background-image: linear-gradient(
       to right,
@@ -79,7 +79,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .hero {
+  .header {
     .title {
       font-size: 9vw;
       transform: translateY(5rem);

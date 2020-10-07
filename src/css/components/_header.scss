@@ -1,7 +1,7 @@
-.header {
+.nav {
   grid-column: col-start 2 / col-end 11;
 }
-.header__container {
+.nav__container {
   grid-column: col-start 2 / col-end 11;
   margin-top: 2rem;
   background-color: transparent;
@@ -57,9 +57,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .header__container {
+  .nav__container {
     /* z-index: -1; */
     display: none;
   }
-
 }
