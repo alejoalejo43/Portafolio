@@ -1,3 +1,64 @@
+.nav {
+  &__checkbox {
+    display: none;
+  }
+  &__button {
+    display: none;
+    /* background-color: $color-white; */
+    font-size: 20px;
+    height: 7rem;
+    width: 7rem;
+    float: right;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 4rem;
+  }
+
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+    &,
+    &::before,
+    &::after {
+      width: 4.5rem;
+      height: 4px;
+      background-color: $color-white;
+      display: inline-block;
+    }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+    &::before {
+      top: -1rem;
+    }
+    &::after {
+      top: 1rem;
+    }
+  }
+  &__button:hover &__icon::before {
+    top: -1.2rem;
+  }
+  &__button:hover &__icon::after {
+    top: 1.2rem;
+  }
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+}
 .nav-btn {
   display: none;
   float: right;
@@ -26,6 +87,12 @@
 }
 @media screen and (max-width: 768px) {
   .nav-btn {
+    display: block;
+  }
+  .nav__button {
+    display: block;
+  }
+  .logo {
     display: block;
   }
 }
