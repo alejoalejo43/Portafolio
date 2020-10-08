@@ -85,6 +85,13 @@
     transform: translate(-0.7rem, 1.3rem);
   }
 }
+.logo2 {
+  display: none;
+  float: left;
+  width: 100px;
+  margin-top: 30px;
+  margin-left: 12px;
+}
 @media screen and (max-width: 768px) {
   .nav-btn {
     display: block;
@@ -92,7 +99,7 @@
   .nav__button {
     display: block;
   }
-  .logo {
+  .logo2 {
     display: block;
   }
 }
