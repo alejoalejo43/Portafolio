@@ -38,18 +38,17 @@
 
 .motivation {
   &__picture {
-    width: 50vw;
-    height: 60vw;
     grid-column: start / col-end 6;
     background-color: $color-primary-blue;
     display: flex;
     justify-content: center;
     &--container {
+      width: 40vw;
       align-self: center;
+      transform: translateX(5vw);
 
       img {
         width: 30vw;
-        /* transform: translate(8vw, 8vw); */
         position: absolute;
         z-index: 1;
       }
@@ -58,11 +57,12 @@
       width: 30vw;
       height: 43vw;
       border: 2px solid $color-secundary;
-      transform: translate(3vw, 3vw);
+      transform: translate(2vw, 3vw);
     }
   }
   &__content {
     grid-column: col-start 7 / end;
+    background-color: $color-primary-blue;
     display: flex;
     justify-content: center;
     &--container {
@@ -73,78 +73,6 @@
       }
 
       /* padding: 10vw 10vw 0 0; */
-    }
-    background-color: $color-primary-blue;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .header {
-    .title {
-      font-size: 9vw;
-      transform: translateY(5rem);
-    }
-    .button {
-      grid-column: col-start 2 / col-end 9;
-      letter-spacing: 0.1rem;
-      font-size: 3.5vw;
-      padding: 2rem 4rem;
-    }
-  }
-}
-
-@media screen and (max-width: 460px) {
-  //343
-  .body__container {
-    grid-template-rows: 90vh 80vh 80vh;
-  }
-  .motivation {
-    &__picture {
-      width: 100vw;
-      height: 90vh;
-      grid-column: start / end;
-      background-color: $color-primary-blue;
-      display: flex;
-      justify-content: center;
-
-      &--container {
-        align-self: center;
-        width: 70vw;
-        height: 80vh;
-        padding-top: 5vw;
-        margin-left: -5vw;
-
-        img {
-          width: 70vw;
-        }
-      }
-      &--square {
-        width: 70vw;
-        height: 100vw;
-        border: 2px solid $color-secundary;
-        transform: translate(5vw, 6vw);
-      }
-    }
-    &__content {
-      grid-column: start / end;
-      &--container {
-        width: 80vw;
-        /*  padding: 10vw 10vw 0 0; */
-        .title {
-          font-size: 14vw;
-          text-align: center;
-        }
-        .paragraph {
-          font-size: 15px;
-          line-height: 20px;
-          text-align: center;
-        }
-        .subtitle {
-          font-size: 30px;
-          text-align: center;
-        }
-      }
-      background-color: $color-primary-blue;
     }
   }
 }
