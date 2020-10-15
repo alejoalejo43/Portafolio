@@ -39,7 +39,7 @@
       .menu {
         position: absolute;
         top: -20px;
-        left: -30px;
+        left: -55px;
         opacity: 0;
         flex-direction: column;
         // justify-content: space-evenly;
@@ -51,6 +51,7 @@
         li {
           a {
             font-size: 2rem;
+            margin-left: 20px;
           }
         }
 
@@ -60,8 +61,9 @@
         clip-path: circle(200px at top right);
         .nav-link {
           opacity: 0;
-          transform: translateX(100%);
-          width: 100%;
+          ////bug
+          transform: translateX(-100%);
+          // width: 100%;
           text-align: center;
 
           a {
@@ -123,6 +125,19 @@
   .body__container {
     grid-template-rows: 90vh 90vh 80vh;
   }
+  /* .nav {
+    &__container {
+      .menu {
+        left: -30px;
+        li {
+          a {
+            font-size: 2rem;
+            //margin-left: 20px;
+          }
+        }
+      }
+    }
+  } */
   .motivation {
     &__picture {
       grid-column: start / end;
