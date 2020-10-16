@@ -37,9 +37,13 @@
 }
 
 .motivation {
+  display: grid;
+  padding: 4rem 0;
+  grid-template-columns: 50% 50%;
+  background-color: $color-primary-blue;
   &__picture {
-    grid-column: start / col-end 6;
-    background-color: $color-primary-blue;
+    grid-column: 1 / 2;
+
     display: flex;
     justify-content: center;
     &--container {
@@ -61,8 +65,7 @@
     }
   }
   &__content {
-    grid-column: col-start 7 / end;
-    background-color: $color-primary-blue;
+    grid-column: 2 / 3;
     display: flex;
     justify-content: center;
     &--container {
