@@ -114,26 +114,98 @@
       }
     }
   }
-}
 
-@media screen and (max-width: 768px) {
-  //343
-  .body__container {
-    grid-template-rows: 90vh 90vh 80vh;
+  .proyects__container {
+    flex-wrap: wrap;
   }
-  /* .nav {
+
+  .proyects__box {
+    padding-bottom: 6rem;
+    width: 80vw;
+    &--front,
+    &--back {
+      width: 80vw;
+      height: 100vw;
+    }
+  }
+
+  .proyects {
     &__container {
-      .menu {
-        left: -30px;
-        li {
-          a {
-            font-size: 2rem;
-            //margin-left: 20px;
-          }
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    row-gap: 2vw;
+    &__title {
+      font-size: 8vw;
+    }
+    &__box {
+      grid-column: 1/4;
+      width: 80vw;
+      height: 100vw;
+    }
+  }
+
+  .card {
+    &__text {
+      font-size: 9vw;
+    }
+
+    &__paragraph {
+      font-size: 2rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+
+  .button {
+    &__small {
+      font-size: 3vw;
+      margin-top: 2rem;
+    }
+    &__large {
+      letter-spacing: 0.1rem;
+      font-size: 3vw;
+      padding: 2rem 2.5rem;
+    }
+  }
+  .anounce {
+    .subtitle {
+      font-size: 4rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+  .footer {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    &__logo {
+      width: 20vw;
+    }
+    &__menu {
+      margin: 4rem;
+      h3 {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 40px;
+      }
+      &--list {
+        flex-direction: row;
+        padding-left: 10px;
+        justify-content: space-evenly;
+
+        a {
+          font-size: 18px;
+          line-height: 20px;
         }
       }
     }
-  } */
+    &__copy {
+      font-size: 17px;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
   .motivation {
     &__picture {
       grid-column: 1 / 3;
@@ -158,7 +230,6 @@
       padding-top: 50px;
       &--container {
         width: 80vw;
-        /*  padding: 10vw 10vw 0 0; */
         .title {
           font-size: 14vw;
           text-align: center;
@@ -174,6 +245,12 @@
         }
       }
       background-color: $color-primary-blue;
+    }
+  }
+  .anounce {
+    .subtitle {
+      font-size: 2.5rem;
+      letter-spacing: 0.2rem;
     }
   }
 }
