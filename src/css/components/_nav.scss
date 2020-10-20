@@ -60,6 +60,11 @@
         transition-delay: 0.4s;
       }
     }
+    &__active {
+      border: 3px solid red;
+      border-radius: 1rem;
+      padding: 2rem 1rem;
+    }
   }
   /*   &__active {
     border: 2px solid red;
