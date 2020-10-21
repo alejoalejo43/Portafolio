@@ -192,15 +192,32 @@
         flex-direction: row;
         padding-left: 10px;
         justify-content: space-evenly;
-
-        a {
-          font-size: 18px;
-          line-height: 20px;
+        flex-wrap: wrap;
+        .footer__item {
+          padding-bottom: 20px;
+          a {
+            font-size: 18px;
+            line-height: 20px;
+          }
         }
       }
     }
     &__copy {
       font-size: 17px;
+    }
+  }
+
+  .brochure {
+    &__index {
+      &--container {
+        p {
+          font-size: 3rem;
+          padding-bottom: 2rem;
+        }
+        .button__small--brochure {
+          font-size: 2rem;
+        }
+      }
     }
   }
 }
@@ -253,4 +270,104 @@
       letter-spacing: 0.2rem;
     }
   }
+}
+
+@media only screen and (max-width: 790px) and (orientation: landscape) {
+  .header {
+    height: 120vh;
+    .title {
+      margin-top: 0;
+    }
+    button {
+      margin-top: 50vh;
+    }
+  }
+  .anounce {
+    .subtitle {
+      font-size: 2.5rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+    &__logo {
+      grid-column: 1 / 2;
+      width: 50%;
+      align-self: center;
+      padding: 0;
+    }
+    &__menu {
+      grid-column: 2/3;
+      margin: 0;
+      h3 {
+        text-align: left;
+        font-size: 2vw;
+      }
+      &--list {
+        justify-content: flex-start;
+
+        a {
+          font-size: 12px;
+          line-height: 30px;
+        }
+      }
+    }
+    &__social {
+      grid-column: 3 / 4;
+      &--icon {
+        font-size: 3vw;
+      }
+    }
+    &__copy {
+      font-size: 2.3vw;
+    }
+  }
+  /*   .proyects {
+    row-gap: 1vw;
+    &__container {
+      height: 100vh;
+    }
+    &__title {
+      font-size: 6vw;
+    }
+    &__box {
+      padding: 0;
+      width: 28vw;
+      &--front,
+      &--back {
+        width: 28vw;
+        height: 35vw;
+      }
+
+      &--1 {
+        grid-column: 1/2;
+      }
+      &--2 {
+        grid-column: 2/3;
+      }
+      &--3 {
+        grid-column: 3/4;
+      }
+    }
+  }
+
+  .card {
+    &__text {
+      font-size: 4vw;
+      padding-top: 3vw;
+    }
+
+    &__paragraph {
+      font-size: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+  .button {
+    &__small {
+      font-size: 2vw;
+      margin-top: 1rem;
+    }
+  } */
 }
