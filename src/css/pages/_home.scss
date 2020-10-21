@@ -8,9 +8,6 @@
   background-size: cover;
   object-fit: cover;
   background-position: top;
-  display: flex;
-  flex-direction: column;
-
   display: grid;
   grid-template-columns:
     [start] repeat(12, [col-start] minmax(11px, 1fr) [col-end])
