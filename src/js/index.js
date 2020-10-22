@@ -1,4 +1,5 @@
 import num from './portfolio';
+import numero from './acerca';
 require('./../img/firmaRS2.svg');
 require('./../img/uno.png');
 require('./../img/alpunto.jpg');
@@ -9,7 +10,7 @@ require('./../index.html');
 require('./../portfolio.html');
 require('./../acerca.html');
 
-const x = 25;
+const x = 200;
 console.log(
-  `I imported ${num} from another module called test.js variable x is ${x}`
+  `I imported ${num} from another module called test.js variable x is ${numero}`
 );

@@ -1,4 +1,5 @@
 /* import { render } from 'node-sass'; */
+export default 50;
 
 require('./../img/eniac.png');
 require('./../img/food.jpg');

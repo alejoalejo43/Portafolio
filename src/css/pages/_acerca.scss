@@ -1,0 +1,40 @@
+.city {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
+  &__subtitle {
+    color: $color-primary-blue;
+    font-family: $font-family;
+    font-size: 4vw;
+    font-weight: 100;
+    text-align: center;
+  }
+  &__paragraph {
+    color: $color-primary-blue;
+    font-family: $font-family;
+    font-size: 1.5vw;
+    font-weight: 100;
+    line-height: 3vw;
+    text-align: center;
+    padding: 0 5vw;
+  }
+  &__picture {
+    filter: brightness(50%);
+    width: 80vw;
+    align-self: center;
+  }
+}
+.pictures {
+  display: flex;
+  flex-direction: column;
+  &__text {
+    align-self: center;
+  }
+  &__heading {
+    font-family: $font-family;
+    color: $color-primary-blue;
+    font-size: 4.5vw;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+}

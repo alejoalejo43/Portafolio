@@ -220,6 +220,34 @@
       }
     }
   }
+
+  .dedication {
+    &__subtitle {
+      padding: 5vw 0;
+      font-size: 3.8rem;
+    }
+    &__paragraph {
+      font-size: 3.5vw;
+      line-height: 4.5vw;
+    }
+  }
+
+  .brochure {
+    &__heading {
+      font-size: 3.8rem;
+      text-align: center;
+    }
+  }
+
+  .city {
+    &__subtitle {
+      font-size: 6vw;
+    }
+    &__paragraph {
+      font-size: 2vw;
+      line-height: 3vw;
+    }
+  }
 }
 
 @media screen and (max-width: 460px) {

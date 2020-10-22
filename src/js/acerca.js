@@ -1,10 +1,17 @@
+export default 600;
+require('./../img/eniac.png');
 require('./../img/pc.png');
-require('./../img/ciudad.jpg');
+require('./../img/mycity.jpg');
+require('./../img/white_house.jpg');
+require('./../img/ice.jpg');
+require('./../img/sea_rocks.jpg');
+require('./../img/salt.png');
+require('./../img/bike.jpg');
+require('./../img/tend_camp.jpg');
+require('./../img/cascade.jpeg');
 
-require('./../img/white_house');
-require('./../img/ice');
-require('./../img/sea_rocks');
-require('./../img/salt');
-require('./../img/bike');
-require('./../img/tend_camp');
-require('./../img/cascade');
+document.addEventListener('DOMContentLoaded', function (event) {
+  document
+    .querySelector('.pictures__index')
+    .insertAdjacentHTML('afterbegin', '<h3>Jalarlo bien</h3>');
+});
