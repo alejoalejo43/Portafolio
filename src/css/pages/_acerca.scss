@@ -1,6 +1,7 @@
 .city {
   display: flex;
   flex-direction: column;
+  align-items: center;
   border: 2px solid red;
   &__subtitle {
     color: $color-primary-blue;
@@ -21,7 +22,7 @@
   &__picture {
     filter: brightness(50%);
     width: 80vw;
-    align-self: center;
+    text-align: center;
   }
 }
 .pictures {
