@@ -37,15 +37,71 @@ const hobbies = {
     text:
       ' Nací en la capital de Colombia, desde entonces he vivido en esta caótica pero linda ciudad, aunque la bandeja paisa es de otra región del país es mi comida preferida, me gusta viajar en moto y cuando quiero tener un reto armo un rompecabezas. El año 2020 es el año de la reeinvención gracias a esta oportunidad de la vida ahora me dedico al desarrollo web.',
   },
+  pictures: [
+    {
+      url: 'static/white_house.jpg',
+      alt: 'white house',
+      weight: 1,
+    },
+    {
+      url: 'static/ice.jpg',
+      alt: 'ice',
+      weight: 2,
+    },
+    {
+      url: 'static/sea_rocks.jpg',
+      alt: 'rocks',
+      weight: 1,
+    },
+    {
+      url: 'static/salt.png',
+      alt: 'salt',
+      weight: 2,
+    },
+    {
+      url: 'static/bike.jpg',
+      alt: 'bike',
+      weight: 2,
+    },
+    {
+      url: 'static/tend_camp.jpg',
+      alt: 'tend camp',
+      weight: 2,
+    },
+    {
+      url: 'static/cascade.jpeg',
+      alt: 'water fall',
+      weight: 2,
+    },
+  ],
 };
-var contenido = function (datos) {
-  return `<h2 class="city__subtitle">${datos.title}</h2>
+const contenido = function (datos) {
+  return `<h2 class="city__subtitle">${datos.title}
+    </h2>
       <img class="city__picture" src=${datos.image} alt="Bogota" />
       <p class="city__paragraph">${datos.text}</p>`;
 };
+
+function pictures(acc, pick) {
+  return (
+    acc +
+    `   <div class="pictures__index--${pick.weight}">
+          <img
+            src=${pick.url}
+            alt=${pick.alt}
+            class="pictures__img"
+          />
+        </div>`
+  );
+}
+
+const distribution = hobbies.pictures.reduce(pictures, '');
 
 document.addEventListener('DOMContentLoaded', function (event) {
   document
     .querySelector('.city')
     .insertAdjacentHTML('afterbegin', contenido(hobbies.city));
+  document
+    .querySelector('.pictures__index')
+    .insertAdjacentHTML('afterbegin', distribution);
 });

@@ -248,6 +248,11 @@
       line-height: 3vw;
     }
   }
+  .pictures {
+    &__index {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
 
 @media screen and (max-width: 460px) {
@@ -296,6 +301,17 @@
     .subtitle {
       font-size: 2.5rem;
       letter-spacing: 0.2rem;
+    }
+  }
+  .pictures {
+    &__index {
+      grid-template-columns: 1fr;
+      &--2 {
+        grid-column: span 1;
+      }
+      &--1 {
+        grid-row: span 2;
+      }
     }
   }
 }
