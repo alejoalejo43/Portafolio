@@ -12,29 +12,9 @@ require('./../img/mycity.jpg');
 const pack = {
   infoPack: [
     {
-      name: 'Podcast',
-      image: 'static/eniac.png',
-      text: 'Práctica podcast',
-    },
-    {
-      name: 'Omnifood',
-      image: 'static/food.jpg',
-      text: 'Práctica Omnifood',
-    },
-    {
-      name: 'Natours',
-      image: 'static/hero-small.jpg',
-      text: 'Práctica Natours',
-    },
-    {
-      name: 'Triller',
-      image: 'static/hotel-2.jpg',
-      text: 'Práctica Triller',
-    },
-    {
-      name: 'Nexter',
-      image: 'static/house-5.jpeg',
-      text: 'Práctica Nexter',
+      name: 'Alpunto',
+      image: 'static/alpunto2.jpg',
+      text: 'Periódico AL Punto',
     },
     {
       name: 'dominico',
@@ -42,9 +22,31 @@ const pack = {
       text: 'Tienda Dominico',
     },
     {
-      name: 'Alpunto',
-      image: 'static/alpunto2.jpg',
-      text: 'Periódico AL Punto',
+      name: 'Natours',
+      image: 'static/hero-small.jpg',
+      text: 'Práctica Natours',
+    },
+    {
+      name: 'Nexter',
+      image: 'static/house-5.jpeg',
+      text: 'Práctica Nexter',
+    },
+    {
+      name: 'Triller',
+      image: 'static/hotel-2.jpg',
+      text: 'Práctica Triller',
+    },
+
+    {
+      name: 'Omnifood',
+      image: 'static/food.jpg',
+      text: 'Práctica Omnifood',
+    },
+
+    {
+      name: 'Podcast',
+      image: 'static/eniac.png',
+      text: 'Práctica podcast',
     },
   ],
 };

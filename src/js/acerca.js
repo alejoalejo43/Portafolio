@@ -8,7 +8,8 @@ require('./../img/sea_rocks.jpg');
 require('./../img/salt.png');
 require('./../img/bike.jpg');
 require('./../img/tend_camp.jpg');
-require('./../img/cascade.jpeg');
+require('./../img/cascade.jpg');
+require('./../img/beach.jpg');
 
 /* const content = `
 <h2 class="city__subtitle">
@@ -63,15 +64,21 @@ const hobbies = {
       alt: 'bike',
       weight: 2,
     },
+
+    {
+      url: 'static/cascade.jpg',
+      alt: 'water fall',
+      weight: 1,
+    },
     {
       url: 'static/tend_camp.jpg',
       alt: 'tend camp',
       weight: 2,
     },
     {
-      url: 'static/cascade.jpeg',
-      alt: 'water fall',
-      weight: 2,
+      url: 'static/beach.jpg',
+      alt: 'in the beach',
+      weight: 1,
     },
   ],
 };

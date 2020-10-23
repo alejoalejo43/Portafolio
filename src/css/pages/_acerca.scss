@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid red;
   &__subtitle {
     color: $color-primary-blue;
     font-family: $font-family;
@@ -35,6 +34,7 @@
     font-weight: 100;
     text-align: center;
     padding-top: 4rem;
+    margin: 0 0 3vw 0;
   }
   &__index {
     display: grid;
