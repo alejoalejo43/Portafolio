@@ -253,6 +253,33 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
+  .activity {
+    &__frame {
+      &--1 {
+        flex-direction: column;
+      }
+      &--2 {
+        flex-direction: column;
+      }
+    }
+    &__paragraph {
+      font-size: 3.5vw;
+      margin: 8vw;
+      line-height: 4vw;
+      &--1 {
+        text-align: justify;
+        padding: 0;
+      }
+      &--2 {
+        text-align: justify;
+        padding-right: 0;
+      }
+    }
+    &__picture {
+      width: 60vw;
+    }
+  }
 }
 
 @media screen and (max-width: 460px) {

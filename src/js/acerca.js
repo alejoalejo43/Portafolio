@@ -81,13 +81,36 @@ const hobbies = {
       weight: 1,
     },
   ],
+  activity: [
+    {
+      direction: 1,
+      url: 'static/dune.jpg',
+      text:
+        ' Desde siempre me ha gustado mucho conocer nuevos lugares y vivir nuevas experiencias gracias a lo que muchas paisajes nos orfrecen, espero seguir conociendo muchos más lugares dentro y fuera del país.',
+    },
+    {
+      direction: 2,
+      url: 'static/puzzle.jpg',
+      text:
+        'Todas las personas lo pueden practicar pero solo aquellos con la paciencia suficiente pueden terminar con exito un reto como el de armar un rompecabezas de 1000 piezas en adelante, es muy entretenido y si escoges un buen motivo le darás un significado aún mayor al próximo cuadro que pongas en tu pared.',
+    },
+    {
+      direction: 1,
+      url: 'static/bikers.jpg',
+      text:
+        '  Viajar es muy agradable pero cuando lo haces manejando tu moto y con las personas que comparten experiencias con tigo ese gusto es aún mejor, cada vez que armamos un viaje me da mucha alegría y disfruto al máximo desde el comienzo hasta el fin!',
+    },
+  ],
 };
+/////*****************************************  ---CITY---  *****************************************/////
 const contenido = function (datos) {
   return `<h2 class="city__subtitle">${datos.title}
     </h2>
       <img class="city__picture" src=${datos.image} alt="Bogota" />
       <p class="city__paragraph">${datos.text}</p>`;
 };
+
+/////***************************************  ---PICTURES---  ***************************************/////
 
 function pictures(acc, pick) {
   return (
@@ -104,11 +127,33 @@ function pictures(acc, pick) {
 
 const distribution = hobbies.pictures.reduce(pictures, '');
 
+/////***************************************  ---ACTIVITY---  ***************************************/////
+
+function activities(acc, act) {
+  return (
+    acc +
+    `        <div class="activity__frame activity__frame--${act.direction}">
+          <img
+            class="activity__picture"
+            src=${act.url}
+            alt="Duna de arena"
+          />
+          <p class="activity__paragraph activity__paragraph--${act.direction}">${act.text}</p>
+        </div>`
+  );
+}
+const set = hobbies.activity.reduce(activities, '');
+
+/////**************************************  ---Insert HTM---  **************************************/////
+
 document.addEventListener('DOMContentLoaded', function (event) {
   document
     .querySelector('.city')
     .insertAdjacentHTML('afterbegin', contenido(hobbies.city));
+
   document
     .querySelector('.pictures__index')
     .insertAdjacentHTML('afterbegin', distribution);
+
+  document.querySelector('.activity').insertAdjacentHTML('afterbegin', set);
 });
